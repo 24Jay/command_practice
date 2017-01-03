@@ -1,0 +1,24 @@
+			Linux Command practice
+ls
+cd 
+pwd
+mkdir
+rm
+rmdir
+mv 
+cp
+touch 
+cat 
+nl
+more
+less
+head
+tail
+which
+whereis
+locate
+find
+find -exec
+find -xargs
+vimtutor
+
