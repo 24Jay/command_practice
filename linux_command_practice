@@ -23,8 +23,11 @@ find -xargs
 vimtutor
 
 
-//远程登录其他Linux服务器
+#远程登录其他Linux服务器
 ssh -l username servcer_ip
 
-//把本地文件传到远程linux服务器,
+#把本地文件传到远程linux服务器,
 scp /test/test.txt username@server_ip:/test/
+
+#压缩传输
+scp -C /test/test.txt username@server_ip:/test/                                
