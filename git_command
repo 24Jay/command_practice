@@ -1,0 +1,26 @@
+#git操作
+
+#初始化
+git init
+
+#例如，添加一个README文件
+git add README.md
+
+#提交
+git commit -m "first commit"
+
+#与GITHUB上面的repository关联
+git remote add origin git@github.com:24Jay/tttttttttttt.git
+
+#解除关联
+git remote remove origin
+
+#提交到远程GITHUB
+git push -u origin master
+
+#git查看状态
+git status
+
+#git查看日志
+git log 
+git log --oneline
