@@ -21,7 +21,17 @@ find
 find -exec
 find -xargs
 vimtutor
+chmod
+chgrp
+chown
+tar
+awk
 
+#从指定的URL下载文件
+wget URL
+#例如,下载一个单独文件：wget http://www.website_name.com/filename
+#例如,递归下载整个网站: wget -r http://www.website_name.com
+#例如，下载指定类型的文件：wget -r -A PNG,pdf http://www.website_name.com 
 
 #远程登录其他Linux服务器
 ssh -l username servcer_ip
