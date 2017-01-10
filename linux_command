@@ -40,4 +40,11 @@ ssh -l username servcer_ip
 scp /test/test.txt username@server_ip:/test/
 
 #压缩传输
-scp -C /test/test.txt username@server_ip:/test/                                
+scp -C /test/test.txt username@server_ip:/test/      
+
+#linux命令行制作jar包，首先编译成.class文件，然后打包即可
+javac compute/Compute.java compute/Task.java
+jar cvf compute.jar compute/*.class
+
+
+                          

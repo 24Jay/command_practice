@@ -1,0 +1,7 @@
+#jar打包命令，制作可运行的jar包
+#1:编写好java文件之后,编译成class文件
+#2:jar命令打包，注意包路径: jar -cvf myname.jar package1.package2/ 
+#3:打开jar包,修改manifest文件，在其中加入一行：Main-Class: package.MainClassName
+
+#或者命令行-e指定主属性：jar -cfev GumballServer.jar  proxy.gumball.GumballServer proxy/gumball/*
+
