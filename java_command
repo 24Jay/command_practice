@@ -5,3 +5,5 @@
 
 #或者命令行-e指定主属性：jar -cfev GumballServer.jar  proxy.gumball.GumballServer proxy/gumball/*
 
+#查询运行的java进程
+jps -l

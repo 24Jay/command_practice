@@ -26,6 +26,8 @@ chgrp
 chown
 tar
 awk
+export
+
 
 #从指定的URL下载文件
 wget URL
@@ -42,9 +44,35 @@ scp /test/test.txt username@server_ip:/test/
 #压缩传输
 scp -C /test/test.txt username@server_ip:/test/      
 
-#linux命令行制作jar包，首先编译成.class文件，然后打包即可
-javac compute/Compute.java compute/Task.java
-jar cvf compute.jar compute/*.class
+#查看当前用户程序使用的端口
+netstat -tlunp
 
+#操作系统daemon(service),以mysql为例
+systemctl start mysql
+systemctl stop mysql
+systemctl restart mysql
+systemctl status mysql
+#设置为开机不启动
+systemctl disable mysql
+#设置为开机启动
+systemctl enable mysql 
+#列出所有的unit
+systemctl
+#列出所有已经安装的unit
+systemctl list-unit-files
 
-                          
+#配置系统端口和service之间的映射
+cat /etc/services       
+
+#让工作在背景中执行，不依赖当前的bash
+nohup java -jar Application                 
+
+renice
+ps
+pstree
+free
+uname
+uptime
+dmesg
+vmstat
+
