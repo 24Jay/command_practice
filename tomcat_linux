@@ -1,0 +1,17 @@
+ubuntu安装tomcat
+1.下载apache-tomcat-9.0.0.M15.tar
+2.解压到/usr/local/apache-tomcat
+3.配置环境变量到/etc/profile
+	#fot apache-tomcat
+	export CATALINA_HOME=/usr/local/apache-tomcat
+	export CATALINA_BASE=/usr/local/apache-tomcat
+	#for maven
+	export MAVEN_HOME=/home/jay/maven/apache-maven-3.3.9/bin
+	#for java
+	export JAVA_HOME=/usr/local/java/jdk1.8.0_112
+	export JRE_HOME=/usr/local/java/jdk1.8.0_112/jre
+	export CLASSPATH=$CATALINA_HOME:$CATALINA_BASE:$MAVEN_HOME:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+	export PATH=$CATALINA_HOME:$CATALINA_BASE:$MAVEN_HOME:$JAVA_HOME/bin:$JRE_HOME/bin:$JAVA_HOME:$PATH
+4.source /etc/profile
+5.启动tomcat
+
