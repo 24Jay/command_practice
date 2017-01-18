@@ -7,3 +7,5 @@
 
 #查询运行的java进程
 jps -l
+
+#使用import static
