@@ -27,7 +27,15 @@ chown
 tar
 awk
 export
-
+/etc/group
+gzip
+df
+du
+ln
+diff
+date
+cal
+grep
 
 #从指定的URL下载文件
 wget URL
