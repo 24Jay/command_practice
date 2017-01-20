@@ -84,3 +84,5 @@ uptime
 dmesg
 vmstat
 
+#配置终端显示: $PS1,$PS2
+.bashrc
