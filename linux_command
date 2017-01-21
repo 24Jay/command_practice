@@ -36,7 +36,8 @@ diff
 date
 cal
 grep
-
+wc
+ps
 #从指定的URL下载文件
 wget URL
 #例如,下载一个单独文件：wget http://www.website_name.com/filename
