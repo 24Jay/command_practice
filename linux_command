@@ -41,6 +41,9 @@ ps
 kill
 killall
 free
+vmstat
+iostat
+watch:execute a program periodically, showing output fullgreen
 #从指定的URL下载文件
 wget URL
 #例如,下载一个单独文件：wget http://www.website_name.com/filename
