@@ -47,6 +47,8 @@ at
 crontab
 watch:execute a program periodically, showing output fullgreen
 lsof
+ip
+ss
 #从指定的URL下载文件
 wget URL
 #例如,下载一个单独文件：wget http://www.website_name.com/filename
