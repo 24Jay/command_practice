@@ -49,14 +49,18 @@ watch:execute a program periodically, showing output fullgreen
 lsof
 ip
 ss
+
+telnet
 #从指定的URL下载文件
 wget URL
 #例如,下载一个单独文件：wget http://www.website_name.com/filename
 #例如,递归下载整个网站: wget -r http://www.website_name.com
 #例如，下载指定类型的文件：wget -r -A PNG,pdf http://www.website_name.com 
 
-#远程登录其他Linux服务器
+#远程登录其他Linux服务器,telnet或者ssh
 ssh -l username servcer_ip
+#telnet采用明文传送报文,所以安全性不好,很多Linux服务器都不开放telnet服务,而采用ssh
+telnet
 
 #把本地文件传到远程linux服务器,
 scp /test/test.txt username@server_ip:/test/
