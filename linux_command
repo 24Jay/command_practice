@@ -64,6 +64,7 @@ telnet
 
 #把本地文件传到远程linux服务器,
 scp /test/test.txt username@server_ip:/test/
+rcp
 
 #压缩传输
 scp -C /test/test.txt username@server_ip:/test/      
