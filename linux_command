@@ -106,3 +106,6 @@ vmstat
 
 #配置桌面文件夹
 /home/jay/.config/user-dirs.dirs
+
+#切换到root用户
+sudo -i

@@ -28,3 +28,7 @@ select * from table_name;
 #插入数据
 insert into table value("113","Jay");
 
+
+#查询表相关信息
+show table status like 'singers' \G
+
