@@ -32,3 +32,5 @@ insert into table value("113","Jay");
 #查询表相关信息
 show table status like 'singers' \G
 
+#查看数据库快照
+mysqldump -u root -p QQSpider > zhangjie.txt
