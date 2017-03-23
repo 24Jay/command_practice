@@ -24,6 +24,8 @@ show columns from table_name;
 
 #查询
 select * from table_name;
+select distinct column_name from  databaseName.tableName
+select count(*) from table_name
 
 #插入数据
 insert into table value("113","Jay");
@@ -34,3 +36,18 @@ show table status like 'singers' \G
 
 #查看数据库快照
 mysqldump -u root -p QQSpider > zhangjie.txt
+
+#查看table的索引
+show index from table_name
+
+#添加索引
+alter table_name add index()
+create index_name on table_name(table_column)
+alter table_name drop index index_name
+
+#查看索引
+show index from table_name;
+
+
+#分析某条查询语句执行的情况
+explain select * from table_name
