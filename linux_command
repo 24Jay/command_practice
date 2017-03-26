@@ -71,6 +71,7 @@ scp -C /test/test.txt username@server_ip:/test/
 
 #查看当前用户程序使用的端口
 netstat -tlunp
+cat /etc/services
 
 #操作系统daemon(service),以mysql为例
 systemctl start mysql
