@@ -110,3 +110,7 @@ vmstat
 
 #切换到root用户
 sudo -i
+
+#解压rar(注意没有"-")
+unrar e
+unrar l
