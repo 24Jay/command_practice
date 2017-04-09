@@ -1,0 +1,38 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.3.RELEASE)
+
+2017-04-08 21:08:02.186  INFO 1238 --- [           main] edu.zju.page.Application                 : Starting Application v0.0.1-SNAPSHOT on jayubuntu with PID 1238 (/home/jay/workspace/page/target/page-0.0.1-SNAPSHOT.jar started by root in /)
+2017-04-08 21:08:02.188  INFO 1238 --- [           main] edu.zju.page.Application                 : No active profile set, falling back to default profiles: default
+2017-04-08 21:08:02.260  INFO 1238 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fa77460: startup date [Sat Apr 08 21:08:02 CST 2017]; root of context hierarchy
+2017-04-08 21:08:03.210  INFO 1238 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 31543 (http)
+2017-04-08 21:08:03.220  INFO 1238 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-04-08 21:08:03.221  INFO 1238 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-04-08 21:08:03.286  INFO 1238 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-04-08 21:08:03.286  INFO 1238 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1033 ms
+2017-04-08 21:08:03.371  INFO 1238 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-04-08 21:08:03.375  INFO 1238 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-04-08 21:08:03.375  INFO 1238 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-04-08 21:08:03.375  INFO 1238 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-04-08 21:08:03.375  INFO 1238 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-04-08 21:08:03.561  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fa77460: startup date [Sat Apr 08 21:08:02 CST 2017]; root of context hierarchy
+2017-04-08 21:08:03.605  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/data]}" onto public java.util.List<edu.zju.page.Singer> edu.zju.page.GreetingController.data()
+2017-04-08 21:08:03.606  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting]}" onto public edu.zju.page.Greeting edu.zju.page.GreetingController.greeting(java.lang.String)
+2017-04-08 21:08:03.606  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dsuncat],methods=[POST]}" onto public java.lang.String edu.zju.page.GreetingController.love(java.lang.String)
+2017-04-08 21:08:03.608  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-08 21:08:03.608  INFO 1238 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-04-08 21:08:03.625  INFO 1238 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-08 21:08:03.625  INFO 1238 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-08 21:08:03.647  INFO 1238 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-08 21:08:03.660  INFO 1238 --- [           main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-04-08 21:08:03.727  INFO 1238 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-04-08 21:08:03.759  INFO 1238 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 31543 (http)
+2017-04-08 21:08:03.761  INFO 1238 --- [           main] edu.zju.page.Application                 : Started Application in 1.9 seconds (JVM running for 2.53)
+.................................Hello ....................
+.................................Spring ....................
+2017-04-08 21:08:03.762  INFO 1238 --- [           main] edu.zju.page.Application                 : Here is a info for u*************************************************

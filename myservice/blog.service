@@ -1,0 +1,11 @@
+# My Blog service 
+
+[Unit]
+Description=My Blog Service
+After=mysql.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/bin/bash -c  /home/jay/myservice/blog.sh
