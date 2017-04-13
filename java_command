@@ -15,3 +15,6 @@ jstat
 jinfo
 jvisualvm
 jconsole
+
+#查看字节码文件
+javap -verbose Code.class
