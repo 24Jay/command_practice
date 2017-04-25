@@ -51,7 +51,7 @@ ip
 ss
 umask
 
-
+echo $?
 
 telnet
 #从指定的URL下载文件
