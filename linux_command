@@ -49,6 +49,9 @@ watch:execute a program periodically, showing output fullgreen
 lsof
 ip
 ss
+umask
+
+
 
 telnet
 #从指定的URL下载文件
