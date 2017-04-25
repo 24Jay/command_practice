@@ -53,6 +53,8 @@ umask
 
 echo $?
 
+size
+
 telnet
 #从指定的URL下载文件
 wget URL
