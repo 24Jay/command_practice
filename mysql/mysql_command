@@ -6,6 +6,7 @@ cp mysql_connection_jar to /usr/local/jdkxx_xx/jre/ext/
 
 #命令行登录mysql
 mysql -u username -p 
+mysql -u root -p -S /var/run/mysqld/mysqld.sock
 
 #显示系统中的数据库
 show databases;
@@ -21,6 +22,7 @@ create table table_name(id VARCHAR(10), name VARCHAR(10));
 
 #显示table信息
 show columns from table_name;
+describe table_name;
 
 #查询
 select * from table_name;
