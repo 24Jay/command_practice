@@ -24,6 +24,9 @@ create table table_name(id VARCHAR(10), name VARCHAR(10));
 show columns from table_name;
 describe table_name;
 
+#显示主键(只对唯一主键有效，多个无效)
+select _rowid from singers;
+
 #查询
 select * from table_name;
 select distinct column_name from  databaseName.tableName
