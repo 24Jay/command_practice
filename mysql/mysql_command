@@ -54,5 +54,16 @@ alter table_name drop index index_name
 show index from table_name;
 
 
+#设置当前会话(Session)事务隔离级别
+set session tx_isolation='READ-UNCOMMITTED';
+set session tx_isolation='READ-COMMITTED';
+set session tx_isolation='REPEATEABLE READ';
+set session tx_isolation='SERIALIZED';
+set @@tx_isolation='READ-COMMITTED';
+#查询 
+select &&tx_isolation
+
+
+
 #分析某条查询语句执行的情况
 explain select * from table_name
