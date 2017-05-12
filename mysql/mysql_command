@@ -43,7 +43,7 @@ show table status like 'singers' \G
 mysqldump -u root -p QQSpider > zhangjie.txt
 
 #查看table的索引
-show index from table_name
+show index from table_name;
 
 #添加索引
 alter table_name add index()
@@ -74,3 +74,6 @@ show variables like 'datadir';
 
 #查询配置文件所在路径
 mysql --help | grep my.cnf
+
+#查询存储引擎
+show engines;
