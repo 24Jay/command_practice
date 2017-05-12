@@ -67,3 +67,10 @@ select &&tx_isolation
 
 #分析某条查询语句执行的情况
 explain select * from table_name
+
+
+#查询数据库指定所在路径
+show variables like 'datadir';
+
+#查询配置文件所在路径
+mysql --help | grep my.cnf
