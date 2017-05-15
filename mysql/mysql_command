@@ -84,3 +84,6 @@ create table table_2 as select * from table_1;
 #强制使用索引来查询
 select * from use index(a) where a =1 and b =2;
 select * from force index(a) where a =1 and b =2;
+
+#查看当前处理进程
+show processlist
