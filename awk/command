@@ -1,1 +1,26 @@
+#awk命令的使用
+
+
 {print}
+
+#逐行打印
+awk '{print $0}' score.txt
+
+#打印每行第一项，第二项...
+awk '{print $1,$2,$3}' score.txt
+
+#加入分隔符
+awk '{print $1,"\t","\t",$2,$3,"\n"}' score.txt
+
+
+#打印行号,内置变量NR表示行号
+awk '{print NR , $1}' score.txt
+
+#内置变量NF表示每一行的列数
+awk '{print NF}' score.txt
+
+#内置变量NF的使用示例，打印最后一列
+awk '{print $NF}' score.txt
+
+#同时处理多个文件
+awk '{print $0}' score.txt, students.txt
