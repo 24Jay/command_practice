@@ -1,4 +1,4 @@
-						iiiiiiiiiiiiiiiiiiiiiiiiiiiiiawk命令的使用
+						awk命令的使用
 #1---awk命令的基本格式， 
 #options ：表示可选参数
 #program ：表示awk的可执行脚本代码
