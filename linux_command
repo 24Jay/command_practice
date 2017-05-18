@@ -35,7 +35,9 @@ ln
 diff
 date
 cal
-grep
+
+grep : global search regular expression(RE) and print out the line，文本搜索工具,重点例如grep -v
+
 wc
 ps
 kill
