@@ -82,8 +82,9 @@ awk 'BEGIN{a=1;b=2} {print a,"+",b,"=",a+b}' score.txt
 
 #9---awk使用条件判断
 awk '$5>80 {print $0}' score.txt
+awk '$5==80 {print $0}' score.txt
 awk '{if($5>80) print $0}' score.txt
-
+awk '$5>80 && $4=="History" {print $0}' score.txt
 
 #10---awk中使用正则表达式
 awk '{/Maths/ print $0}' score.txt
