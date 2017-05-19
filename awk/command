@@ -85,6 +85,16 @@ awk '$5>80 {print $0}' score.txt
 awk '$5==80 {print $0}' score.txt
 awk '{if($5>80) print $0}' score.txt
 awk '$5>80 && $4=="History" {print $0}' score.txt
+awk '{printf"%20s ：%-15s %-10s\n",FILENAME,$4,$5}' score.txt
 
 #10---awk中使用正则表达式
 awk '{/Maths/ print $0}' score.txt
+
+#11---执行awk脚本
+awk -f calculate.awk score.txt
+
+#12---拆分文件（使用重定向）：例如，按照每个学生的姓名，输出该学生的成绩到一个单独的文件
+awk '{print >$1}' score.txt
+
+#13---找出文件中长度大于100的行
+awk 'length>100' calculate.awk
