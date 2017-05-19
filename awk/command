@@ -98,3 +98,6 @@ awk '{print >$1}' score.txt
 
 #13---找出文件中长度大于100的行
 awk 'length>100' calculate.awk
+
+#14---统计
+awk '{sum+=1} END {print sum}' score.txt
