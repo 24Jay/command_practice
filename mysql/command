@@ -87,3 +87,16 @@ select * from force index(a) where a =1 and b =2;
 
 #查看当前处理进程
 show processlist
+
+#MySQL数据库备份和恢复,
+#1-使用root权限运行下面的命令
+mysqldump -h localhost -u root -p --dataases mytest > mytest_bak.sql
+mysql -u root -p < mytest_bak.sql
+
+
+#2-因为secure_file_priv设置了路径，因此备份路径必须为/var/lib/mysql-files
+mysql mytest -u root -p 'select * into outfile "/var/lib/mysql-files/tt.txt' from tt;
+select * into outfile '/var/lib/mysql-files/tt.txt' from tt;
+
+load data infile '/var/lib/mysql-files/tt.txt' into table tt;
+
