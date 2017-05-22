@@ -53,6 +53,8 @@ ip
 ss
 umask
 
+source : 也称为点命令(例如：./test.sh和source test.sh是一样的),功能是使得shell读取并执行文件中的所有语句
+
 echo $?
 
 size
