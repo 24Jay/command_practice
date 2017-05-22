@@ -87,6 +87,10 @@ awk '{if($5>80) print $0}' score.txt
 awk '$5>80 && $4=="History" {print $0}' score.txt
 awk '{printf"%20s ：%-15s %-10s\n",FILENAME,$4,$5}' score.txt
 
+
+#9.1---awk使用for循环，例如:逐行打印文件中source那一行的所有项目
+awk '/source/{for(i=0;i<=NF;i++)print $i,"\n"}' linux_command
+
 #10---awk中使用正则表达式
 awk '{/Maths/ print $0}' score.txt
 
