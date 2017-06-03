@@ -27,14 +27,21 @@ if [ -d /etc/profile.d ]; then
 fi
 
 
-#fot apache-tomcat
+#for apache-tomcat
 export CATALINA_HOME=/usr/local/apache-tomcat
 export CATALINA_BASE=/usr/local/apache-tomcat
 
 #for maven
 export MAVEN_HOME=/home/jay/maven/apache-maven-3.3.9/bin
+
 #for java
 export JAVA_HOME=/usr/local/java/jdk1.8.0_112
 export JRE_HOME=/usr/local/java/jdk1.8.0_112/jre
 export CLASSPATH=$CATALINA_HOME:$CATALINA_BASE:$MAVEN_HOME:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$CATALINA_HOME:$CATALINA_BASE:$MAVEN_HOME:$JAVA_HOME/bin:$JRE_HOME/bin:$JAVA_HOME:$PATH
+
+#for node.js
+export NODE_HOME=/usr/local/node.js/
+export PATH=$NODE_HOME/bin:$PATH
+
+

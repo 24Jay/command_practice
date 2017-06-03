@@ -1,0 +1,147 @@
+### 1. awk命令的基本格式， 
+* options ：表示可选参数 
+* program ：表示awk的可执行脚本代码
+* file ： 表示需要处理的文件
+
+> awk [options] 'program' file
+
+----------
+
+### 2. 逐行打印
+> awk '{print $0}' score.txt
+
+----------
+
+### 3. 分隔符
+* 3.1 指定':'为分隔符，awk默认的分隔符为空格和制表符
+> awk -F ':' '{print $2}' /etc/passwd
+
+* 3.2 指定多个分隔符，'[:)]'
+> awk -F '[:())]' '{print $1,$2}' score.txt
+
+* 3.3 打印每行第一项，第二项...
+> awk '{print $1,$2,$3}' score.txt
+
+* 3.4 加入分隔符
+> awk '{print $1,"\t","\t",$2,$3,"\n"}' score.txt
+
+* 3.5 指定输出分隔符为"**"
+> awk -F ':' '{print $1,$2,$3,$4,OFS="**"}' score.txt 
+
+----------
+
+
+### 4. awk 内置变量的使用
+
+* $0 这个表示文本处理时的当前行
+
+* $1 表示文本行被分隔后的第 1 个字段列
+
+* $2 表示文本行被分割后的第 2 个字段列
+
+* $3 表示文本行被分割后的第 3 个字段列
+
+* $n 表示文本行被分割后的第 n 个字段列
+
+* NR 表示文件中的行号，表示当前是第几行
+
+* NF 表示文件中的当前行列的个数，类似于 mysql 数据表里面每一条记录有多少个字段
+
+* FS 表示 awk 的输入分隔符，默认分隔符为空格和制表符，你可以对其进行自定义设置
+
+* OFS 表示 awk 的输出分隔符，默认为空格，你也可以对其进行自定义设置
+
+* FILENAME 表示当前文件的文件名称，如果同时处理多个文件，它也表示当前文件名称
+
+
+* 打印行号,内置变量NR表示行号
+
+> awk '{print NR , $1}' score.txt
+
+* 内置变量NF表示每一行的列数
+
+> awk '{print NF}' score.txt
+
+* 内置变量NF的使用示例，打印最后一列
+
+> awk '{print $NF}' score.txt
+
+
+----------
+
+
+### 5. 同时处理多个文件
+> awk '{print $0}' score.txt, students.txt
+
+----------
+
+### 6. BEGIN关键字
+在开始读取一个文件之前，运行一次 BEGIN后面的脚本，只执行一次
+> awk 'BEGIN {print "hello world!\n"} {print $1,$2}' score.txt
+
+----------
+
+### 7. END关键字 
+END 指令和 BEGIN 恰好相反，在 awk 读取并且处理完文件的所有内容行之后，才会执行 END 后面的脚本代码段
+> awk 'BEGIN {print "hello world!\n"} END {print "\nGood bye....."} {print $1,$2}' score.txt
+awk 'BEGIN {print "hello world!\n"} {print $1,$2} END{print "\nGood bye....."}' score.txt
+
+----------
+
+#8---awk使用变量,注意分割符号';'
+awk '{msg="hello world!";print msg}' score.txt
+awk 'BEGIN{msg="hello world!";print msg}' score.txt
+awk 'BEGIN{msg="hello world!"} {print msg}' score.txt
+
+awk 'BEGIN{a=1;b=2} {print a,"+",b,"=",a+b}' score.txt
+
+----------
+
+### 9. awk使用条件判断
+```
+ awk '$5>80 {print $0}' score.txt
+
+ awk '$5==80 {print $0}' score.txt
+
+ awk '{if($5>80) print $0}' score.txt
+
+ awk '$5>80 && $4=="History" {print $0}' score.txt
+
+ awk '{printf"%20s ：%-15s %-10s\n",FILENAME,$4,$5}' score.txt
+ ```
+
+* 9.1 awk使用for循环，例如:逐行打印文件中source那一行的所有项目
+```
+ awk '/source/{for(i=0;i<=NF;i++)print $i,"\n"}' linux_command
+ ```
+----------
+
+### 10. awk中使用正则表达式
+> awk '{/Maths/ print $0}' score.txt
+
+----------
+
+### 11.执行awk脚本
+> awk -f calculate.awk score.txt
+
+----------
+
+
+### 12.拆分文件（使用重定向）：例如，按照每个学生的姓名，输出该学生的成绩到一个单独的文件
+> awk '{print >$1}' score.txt
+
+----------
+
+### 13.找出文件中长度大于100的行
+> awk 'length>100' calculate.awk
+
+----------
+
+### 14. 统计
+> awk '{sum+=1} END {print sum}' score.txt
+
+----------
+ ```
+```
+ ```
+```
