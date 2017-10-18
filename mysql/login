@@ -1,0 +1,2 @@
+SQL=`which mysql`
+$SQL -u root -p
